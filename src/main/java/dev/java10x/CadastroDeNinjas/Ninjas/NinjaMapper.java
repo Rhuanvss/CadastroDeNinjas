@@ -2,7 +2,7 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class NinjaMapper {
 
     public NinjaModel map(NinjaDTO ninjaDTO) {
@@ -20,8 +20,8 @@ public class NinjaMapper {
         NinjaDTO ninjaDTO = new NinjaDTO();
         ninjaDTO.setId(ninjaModel.getId());
         ninjaDTO.setNome(ninjaModel.getNome());
-        ninjaDTO.setRank(ninjaModel.getRank());
         ninjaDTO.setEmail(ninjaModel.getEmail());
+        ninjaDTO.setRank(ninjaModel.getRank());
         ninjaDTO.setIdade(ninjaModel.getIdade());
         ninjaDTO.setMissoes(ninjaModel.getMissoes());
         return ninjaDTO;
