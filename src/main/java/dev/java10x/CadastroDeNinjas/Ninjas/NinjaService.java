@@ -19,9 +19,6 @@ public class NinjaService {
         this.ninjaMapper = ninjaMapper;
     }
 
-    public NinjaService(NinjaRepository ninjaRepository) {
-        this.ninjaRepository = ninjaRepository;
-    }
 
     // Listar Ninjas
     public List<NinjaDTO> ListarNinjas(){
@@ -56,6 +53,7 @@ public class NinjaService {
             NinjaModel ninjaAtualizado = ninjaMapper.map(ninjaDTO);
             ninjaAtualizado.setId(id);
             NinjaModel ninjasalvo = ninjaRepository.save(ninjaAtualizado);
+            return ninjaMapper.map(ninjasalvo);
         }
         return null;
     }
